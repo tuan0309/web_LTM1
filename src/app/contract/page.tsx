@@ -6,10 +6,10 @@ export default function Rules() {
     <main className=" py-12 px-32 bg-white">
       <p className="text-white mb-10 text-xl">
         <span>
-          <Link className="text-primary1 font-bold" href={"/"}>Trang chủ</Link>
+          <Link className="text-primary1 text-[20px] font-bold" href={"/"}>Trang chủ</Link>
         </span>
         <span className="mx-3 text-[#000]">/</span>
-        <span className="text-primary1 font-bold">Liên hệ</span>
+        <span className="text-primary1 text-[20px] font-bold">Liên hệ</span>
       </p>
       <div className=" relative w-full h-96">
         <iframe className="absolute top-0 left-0 w-full h-full "
@@ -17,7 +17,7 @@ export default function Rules() {
         </iframe>
       </div>
       <div className="w-2/3">
-        <p className="font-bold mt-10 text-primary1 text-[30px]">Liên Hệ Bookstore</p>
+        <p className="font-bold mt-10 text-primary1 text-[35px]">Liên Hệ Bookstore</p>
         <div className="divide-y divide-dashed">
           <p className="my-4 text-black text-[18px]">
             Nếu có bất cứ vấn đề nào thắc mắc bạn có thể gửi mail trực tiếp đến chúng tôi thông qua mẫu bên cạnh hoặc bạn có thể liên hệ theo thông tin dưới đây:

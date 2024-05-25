@@ -18,15 +18,21 @@ export default function Header() {
             <p className="text-primary1 font-bold text-[25px] ">BOOKSTORE</p>
           </Link>
         </div>
-        <div className="flex">
+        <div className="flex ">
+        <Link href={"/"}>
+            <p className="text-black mr-2 font-bold text-[20px] px-5">Trang chủ</p>
+          </Link>
           <Link href={"/menu"}>
-            <p className="text-black mr-6 font-bold text-[20px] px-10">Danh mục</p>
+            <p className="text-black mr-2 font-bold text-[20px] px-5">Danh mục</p>
           </Link>
           <Link href={"/contract"}>
-            <p className="text-black mr-6 font-bold text-[20px] px-10">Liên hệ</p>
+            <p className="text-black mr-2 font-bold text-[20px] px-5">Liên hệ</p>
           </Link>
           <Link href={"/about-us"}>
-            <p className="text-black mr-6 font-bold text-[20px] px-10">Giới thiệu</p>
+            <p className="text-black mr-2 font-bold text-[20px] px-5">Giới thiệu</p>
+          </Link>
+          <Link href={"/discount"}>
+            <p className="text-black mr-2 font-bold text-[20px] px-5">Khuyến mại</p>
           </Link>
         </div>
         <div className="w-250  ">

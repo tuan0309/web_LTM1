@@ -54,6 +54,9 @@ export default function BookDetail() {
             <Button className="!border-[2px] !border-primary3 !bg-primary1 !text-white !pb-9 !text-[18px] !px-12">
               <Link href={"/"}>Mua sách ngay</Link>
             </Button>
+            <Button className="!border-[2px] !border-primary3 !bg-primary1 !text-white !pb-9 !text-[18px] !px-9">
+              <Link href={"/"}>Thêm vào giỏ hàng</Link>
+            </Button>
           </div>
         </div>
       </div>
