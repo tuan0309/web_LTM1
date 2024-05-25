@@ -1,8 +1,35 @@
+"use client";
+import { userService } from "@/core/apis/user.service";
 import { Input } from "antd";
 import { Button } from "antd";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function SignUp() {
+  const router = useRouter();
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+
+  const reg = async () => {
+    const body = {
+      username: username,
+      password: password,
+      name: name,
+      email: email,
+      role: "ROLE_USER",
+    };
+    const res = await userService.register(body);
+    if (res === 1) {
+      window.alert("Đăng ký thành công");
+      router.push("/login");
+    } else {
+      window.alert("Có lỗi xảy ra");
+    }
+  };
+
   return (
     <main>
       <main>
@@ -19,23 +46,48 @@ export default function SignUp() {
               Đăng ký tài khoản
             </p>
             <div className="w-1/2 mx-auto mb-6">
+              <p className="ml-2 mb-2 text-black ">Nhập họ và tên</p>
+              <Input
+                onChange={(e: any) => setName(e.target.value)}
+                className="h-10"
+                placeholder="Nhập họ và tên"
+              />
+            </div>
+            <div className="w-1/2 mx-auto mb-6">
               <p className="ml-2 mb-2 text-black ">Email</p>
-              <Input className="h-10" placeholder="Nhập email" />
+              <Input
+                onChange={(e: any) => setEmail(e.target.value)}
+                className="h-10"
+                placeholder="Nhập email"
+              />
             </div>
             <div className="w-1/2 mx-auto mb-6">
               <p className="ml-2 mb-2 text-black ">Username</p>
-              <Input className="h-10" placeholder="Nhập username" />
+              <Input
+                onChange={(e: any) => setUsername(e.target.value)}
+                className="h-10"
+                placeholder="Nhập username"
+              />
             </div>
             <div className="w-1/2 mx-auto mb-6">
               <p className="ml-2 mb-2 text-black ">Mật khẩu</p>
-              <Input className="h-10" placeholder="Nhập mật khẩu" />
+              <Input
+                type="password"
+                onChange={(e: any) => setPassword(e.target.value)}
+                className="h-10"
+                placeholder="Nhập mật khẩu"
+              />
             </div>
-            <div className="w-1/2 mx-auto mb-6">
+            {/* <div className="w-1/2 mx-auto mb-6">
               <p className="ml-2 mb-2 text-black ">Nhập lại mật khẩu</p>
-              <Input className="h-10" placeholder="Nhập lại mật khẩu" />
-            </div>
+              <Input type="password" className="h-10" placeholder="Nhập lại mật khẩu" />
+            </div> */}
             <div className="w-1/2 mx-auto mt-12 mb-6">
-              <Button className="w-full !bg-primary1 !h-10" type="primary">
+              <Button
+                onClick={() => reg()}
+                className="w-full !bg-primary1 !h-10"
+                type="primary"
+              >
                 Đăng ký
               </Button>
             </div>
