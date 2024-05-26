@@ -3,6 +3,7 @@
 import { Button } from "antd";
 import { Input } from "antd";
 import Link from "next/link";
+import { ShoppingCartOutlined } from '@ant-design/icons';
 
 export default function Header() {
   const login = localStorage.getItem("login");
@@ -54,7 +55,7 @@ export default function Header() {
             </p>
           </Link>
         </div>
-        <div className="w-250  ">
+        <div className="w-250 flex  ">
           <Input className="h-10 " placeholder="Tìm kiếm" />
         </div>
         {login ? (
