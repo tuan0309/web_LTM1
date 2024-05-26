@@ -66,10 +66,10 @@ export default async function BookDetail(params: IParams) {
           </p> */}
           <div className="mt-8 flex gap-6">
             <Button className="!border-[2px] !border-primary3 !bg-primary1 !text-white !pb-9 !text-[18px] !px-12">
-              <Link href={"/"}>Mua sách ngay</Link>
+              <Link href={"/checkout"}>Mua sách ngay</Link>
             </Button>
             <Button className="!border-[2px] !border-primary3 !bg-primary1 !text-white !pb-9 !text-[18px] !px-9">
-              <Link href={"/"}>Thêm vào giỏ hàng</Link>
+              <Link href={"/cart"}>Thêm vào giỏ hàng</Link>
             </Button>
           </div>
         </div>
