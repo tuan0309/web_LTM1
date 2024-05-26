@@ -58,6 +58,10 @@ export default function Header() {
         <div className="w-250 flex  ">
           <Input className="h-10 " placeholder="Tìm kiếm" />
         </div>
+        <Link href={"/cart"}>
+          <ShoppingCartOutlined style={{ fontSize: '35px', marginRight: '10px', }} />
+        </Link>
+
         {login ? (
           <div className="flex items-center">
             <div>

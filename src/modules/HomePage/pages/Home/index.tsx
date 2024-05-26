@@ -99,7 +99,7 @@ export default function Home() {
                   </Link>
                   <div>
                     <Button type="primary" className="!bg-primary1">
-                      <Link href={"/book-detail"}>Xem chi tiết</Link>
+                      <Link href={`/book-detail/${item?.product_id}`}>Xem chi tiết</Link>
                     </Button>
                   </div>
                 </div>
