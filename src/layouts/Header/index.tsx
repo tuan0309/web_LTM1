@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import { Input } from "antd";
 import Link from "next/link";
+import { ShoppingCartOutlined } from '@ant-design/icons';
 
 export default function Header() {
   return (
@@ -19,7 +20,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex ">
-        <Link href={"/"}>
+          <Link href={"/"}>
             <p className="text-black mr-2 font-bold text-[20px] px-5">Trang chủ</p>
           </Link>
           <Link href={"/menu"}>
@@ -35,10 +36,15 @@ export default function Header() {
             <p className="text-black mr-2 font-bold text-[20px] px-5">Khuyến mại</p>
           </Link>
         </div>
-        <div className="w-250  ">
+        <div className="w-250 flex  ">
           <Input className="h-10 " placeholder="Tìm kiếm" />
         </div>
         <div className="flex">
+
+          <Link href={"/cart"}>
+            <ShoppingCartOutlined style={{ fontSize: '35px', marginRight: '10px', }} />
+          </Link>
+
           <Button type="default">
             <Link href={"/sign-up"}>Đăng ký</Link>
           </Button>
